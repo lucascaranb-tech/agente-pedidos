@@ -25,7 +25,10 @@
 - A função `atender()` em `src/agente.py` é usada pelo terminal e pelo Telegram
 
 ## Exemplo de conversa
-<!-- Cole aqui o print da conversa no Telegram -->
+<img width="412" height="405" alt="image" src="https://github.com/user-attachments/assets/1bcfb9c4-19ba-493a-8cfd-9943929ff5d3" />
+<img width="395" height="389" alt="image" src="https://github.com/user-attachments/assets/082e3dd2-c2dc-400a-a37d-1f84b49b9d2f" />
+
+
 
 ## Estrutura
 ```
