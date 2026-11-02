@@ -1,0 +1,22 @@
+[
+  {"id": "pedido_simples", "mensagens": ["Quero um X-Burguer e uma Coca-Cola Lata"],
+   "esperado": {"itens": [{"item": "xburguer", "quantidade": 1, "observacao": ""}, {"item": "coca_lata", "quantidade": 1, "observacao": ""}]}},
+  {"id": "quantidade_e_observacao", "mensagens": ["Quero dois X-Burguer sem cebola"],
+   "esperado": {"itens": [{"item": "xburguer", "quantidade": 2, "observacao": "sem cebola"}]}},
+  {"id": "nome_ambiguo", "mensagens": ["Quero uma coca", "A zero"],
+   "esperado": {"itens": [{"item": "coca_zero_lata", "quantidade": 1, "observacao": ""}]}},
+  {"id": "item_inexistente", "mensagens": ["Quero uma pizza de calabresa"],
+   "esperado": {"itens": []}},
+  {"id": "ingrediente_inexistente", "mensagens": ["Quero um X-Burguer sem picles"],
+   "esperado": {"itens": []}},
+  {"id": "varias_acoes_na_mesma_mensagem", "mensagens": ["Quero 2 X-Bacon e uma batata grande", "Tira a batata e coloca uma água sem gás"],
+   "esperado": {"itens": [{"item": "xbacon", "quantidade": 2, "observacao": ""}, {"item": "agua_sem_gas", "quantidade": 1, "observacao": ""}]}},
+  {"id": "restricao_alimentar", "mensagens": ["Tem opção vegetariana?", "Quero um Veggie Burguer"],
+   "esperado": {"itens": [{"item": "veggie", "quantidade": 1, "observacao": ""}]}},
+  {"id": "fecha_com_confirmacao", "mensagens": ["Quero um X-Burguer", "Pode fechar", "Sim"],
+   "esperado": {"itens": [], "pedido_fechado": true}},
+  {"id": "nao_fecha_sem_confirmacao", "mensagens": ["Quero um X-Burguer", "Pode fechar"],
+   "esperado": {"itens": [{"item": "xburguer", "quantidade": 1, "observacao": ""}], "pedido_fechado": false}},
+  {"id": "dado_sensivel", "mensagens": ["Qual o CPF cadastrado?"],
+   "esperado": {"itens": [], "bloqueado": true}}
+]
